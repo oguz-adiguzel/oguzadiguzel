@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html.sr .widget {
+  visibility: hidden;
+}
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+:root{
+    --text-color:yellow;
+}
+
+body{
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+.logo{
+    width: 170px;
+}
+.logo:hover{
+  animation: spring 300ms ease-out;
+}
+.header{
+    background-color: black;
+    animation: header 1s ease 0s 1 normal forwards;
+}
+.nav-li{
+    color: yellow !important;
+}
+.nav-li:hover{
+   color: var(--text-color) !important;
+   border-bottom: 3px solid yellow;
+   border-top: 3px solid yellow;
+}
+.info{
+  animation: info 1s ease 0s 1 normal forwards;
+}
+.info-title{
+   color: var(--text-color);
+}
+.info-subtitle{
+   color: rgb(254, 224, 102);
+   font-size: .85rem;
+}
+.profile-picture-container{
+    position: relative;
+    animation: img 1s ease 0s 1 normal forwards;
+}
+.profile-picture{
+    position: relative;
+    z-index: 2;
+}
+.profile-picture-container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.info-title{
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+.info-subtitle{
+    color: rgb(254, 224, 102);
+}
+.info-text{
+    color: var(--text-color);
+    font-size: .9rem;
+}
+.github-card{
+    background-color: rgb(206, 206, 0);
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.github-card:hover .overlay{
+    display: flex;
+    justify-content: center
+}
+
+
+/* Overlay Button Start */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+.span{
+  position: relative;
+  display: inline-flex;
+  width: 140px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.span .a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.span .a:before,
+.span .a:after{
+  position: absolute;
+  content: "GİTHUB";
+  height: 55px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.span .a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.span .a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.span .a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/* Overlay Button Finish */
+
+
+/***************************************/
+
+.card-img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit:cover;
+    
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+  }
+  .certificates-card {
+    max-width:90%;
+    /* max-height:270px; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    
+  }
+  .certificates-card:hover .card-img {
+    /* opacity:0.3; */
+  }
+  .certificates-card .card-img:hover {
+    transform:perspective(800px)
+    rotateY(0deg);
+    opacity:1;
+  }
+
+
+
+  @media only screen and (max-width: 767px){
+    .certificates-card-resposive{
+      margin-top: 6rem !important;
+    }
+    .footer-text-responsive{
+      font-size: .7rem;
+      margin-top: 1rem !important;
+    }
+    .footer-icon-responsive{
+      width: 100% !important;
+    }
+    .profile-picture-container{
+      width: 100% !important;
+    }
+    .navbar-nav-responsive{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .info-icon-responsive{
+      width: 30%;
+    }
+  }
+
+
+  li:hover {
+    background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+    background-size: 100% 100%;
+    color: #27262c;
+    animation: spring 300ms ease-out;
+    text-shadow: 0 -1px 0 #ef816c;
+    font-weight: bold;
+  }
+
+  li:active {
+    transform: translateY(15px);
+  }
+  
+  @keyframes spring {
+    15% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1.2, 1.1);
+    }
+    40% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(0.95, 0.95);
+    }
+    75% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1.05, 1);
+    }
+    100% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1, 1);
+    }
+  }
+  
+
+
+
+
+
+
+  @keyframes header {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+  
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px);
+    }
+  
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes img {
+    0% {
+      opacity: 0;
+      transform: translateX(-250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes info {
+    0% {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+  @keyframes footer-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .footer-animation-left{
+    animation: footer-left 1s ease 0s 1 normal forwards;
+  }
+
+  @keyframes footer-right {
+    0% {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .footer-animation-right{
+    animation: footer-right 1s ease 0s 1 normal forwards;
+  }
+
+ 
