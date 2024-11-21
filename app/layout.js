@@ -19,11 +19,11 @@ export default function RootLayout({ children }) {
       <body className='bg-black text-white'>
         <div className='container mx-auto h-screen'>
           <Header />
-          <div className='w-full flex py-5'>
-            <div className='w-1/6 h-screen'>
+          <div className='w-full flex flex-col lg:flex-row py-5'>
+            <div className='w-full lg:w-1/6 lg:h-screen'>
               <SideBar menu={false} />
             </div>
-            <div className='w-5/6'>
+            <div className='w-full lg:w-5/6'>
               {children}
             </div>
           </div>

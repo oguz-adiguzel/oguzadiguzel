@@ -33,14 +33,14 @@ const Works = ({ menu, propIndex }) => {
       <div className={menu ? 'w-full flex justify-center pt-0' : 'w-full flex justify-center pt-14'}>
         <motion.div initial={{ opacity: 0, translateY: -200 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 1 }} className='w-1/2'>
-          <p className={menu ? 'text-2xl font-bold px-20' : 'text-6xl font-bold px-36 mt-36 tracking-widest'}>My Works</p>
+          transition={{ duration: 1 }} className='w-full lg:w-1/2'>
+          <p className={menu ? 'text-2xl font-bold px-20' : 'text-4xl text-center lg:text-6xl font-bold lg:px-36 lg:mt-36 lg:tracking-widest'}>My Works</p>
         </motion.div>
       </div>
 
 
       <Swiper
-        className={menu ? 'mt-3' : 'mt-24'}
+        className={menu ? 'mt-3' : 'mt-10 lg:mt-24'}
         spaceBetween={50}
         slidesPerView={1}
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
