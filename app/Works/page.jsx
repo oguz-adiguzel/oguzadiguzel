@@ -30,6 +30,8 @@ const Works = ({ menu, propIndex }) => {
 
   return (
     <div className='w-full'>
+      <title>Oğuz Adıgüzel - Works</title>
+      <meta property="og:title" content="Oğuz Adıgüzel - Works" key="title" />
       <div className={menu ? 'w-full flex justify-center pt-0' : 'w-full flex justify-center pt-14'}>
         <motion.div initial={{ opacity: 0, translateY: -200 }}
           animate={{ opacity: 1, translateY: 0 }}

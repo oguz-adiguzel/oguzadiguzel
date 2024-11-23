@@ -3,6 +3,8 @@ import React from 'react'
 const Contact = ({ menu }) => {
   return (
     <div className={menu ? 'bg-contact-bg w-full h-[300px] bg-cover' : 'w-full h-[650px] mt-10 lg:mt-40 bg-contact-bg bg-cover'}>
+      <title>Oğuz Adıgüzel - Contact</title>
+      <meta property="og:title" content="Oğuz Adıgüzel - Contact" key="title" />
       <div className='w-full h-full bg-[#000000e8] flex justify-center lg:justify-end lg:pr-20 items-center'>
         <div className={menu ? 'w-1/3 bg-black py-4' : 'w-3/4 lg:w-1/4 py-16 bg-black'}>
           <p className={menu ? 'text-center text-sm' : 'text-center text-xl'}>Oğuz Adıgüzel</p>

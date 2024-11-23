@@ -4,6 +4,8 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import SideBar from '@/components/SideBar'
 import { IndexProvider } from './context/selectedIndex'
+import { usePathname } from 'next/navigation'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +15,9 @@ const inter = Inter({ subsets: ['latin'] })
 // }
 
 export default function RootLayout({ children }) {
+  const path = usePathname()
+  console.log('path',path);
+  
   return (
     <IndexProvider>
     <html lang="en">

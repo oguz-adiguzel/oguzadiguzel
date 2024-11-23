@@ -16,6 +16,8 @@ const HireUs = ({ menu , propIndex}) => {
   return (
 
     <div className={menu ? 'w-full h-full' : 'w-full h-full pt-10 lg:pt-32'}>
+      <title>Oğuz Adıgüzel - Projects</title>
+      <meta property="og:title" content="Oğuz Adıgüzel - Projects" key="title" />
       <p className={menu ? 'text-lg text-center font-bold tracking-widest' : 'text-4xl text-center font-bold tracking-widest'}>My Project</p>
       <Swiper
         className={menu ? 'mt-10' : 'mt-24'}

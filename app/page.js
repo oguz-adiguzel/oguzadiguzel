@@ -1,5 +1,6 @@
 'use client'
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 
 export default function Home({ menu }) {
@@ -18,6 +19,8 @@ export default function Home({ menu }) {
 
   return (
     <div className="w-full h-full">
+        <title>Oğuz Adıgüzel</title>
+        <meta property="og:title" content="Oğuz Adıgüzel" key="title" />
       <div className={menu ? 'flex h-auto pt-0' : "flex flex-col lg:flex-row h-auto pt-5 lg:pt-40"}>
         <motion.div initial={{ opacity: 0, translateY: -200 }}
           animate={{ opacity: 1, translateY: 0 }}
