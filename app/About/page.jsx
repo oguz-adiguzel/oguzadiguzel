@@ -78,7 +78,7 @@ const About = ({ menu }) => {
           className={
             menu
               ? "w-24 h-16 border-2 border-blue-500"
-              : "lg:w-60 h-44 border-8 border-blue-500"
+              : "lg:w-60 h-36 lg:h-44 border-8 border-blue-500"
           }
         >
           {/* <img className="w-full h-full" src="udemy.png" /> */}
@@ -95,7 +95,7 @@ const About = ({ menu }) => {
           className={
             menu
               ? "w-24 h-16 border-2 border-blue-500"
-              : "lg:w-60 h-44 border-8 border-blue-500"
+              : "lg:w-60 h-36 lg:h-44 border-8 border-blue-500"
           }
         >
           {/* <img className="w-full h-full" src="bilgeadam1.jpeg" /> */}
@@ -112,7 +112,7 @@ const About = ({ menu }) => {
           className={
             menu
               ? "w-24 h-16 border-2 border-blue-500"
-              : "lg:w-60 h-44 border-8 border-blue-500"
+              : "lg:w-60 h-36 lg:h-44 border-8 border-blue-500"
           }
         >
           {/* <img className="w-full h-full" src="bilgeadam2.jpeg" /> */}
@@ -129,7 +129,7 @@ const About = ({ menu }) => {
           className={
             menu
               ? "w-24 h-16 border-2 border-blue-500"
-              : "lg:w-60 h-44 border-8 border-blue-500"
+              : "lg:w-60 h-36 lg:h-44 border-8 border-blue-500"
           }
         >
           {/* <img className='w-full h-full' src='diploma.png' /> */}
