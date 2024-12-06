@@ -1,13 +1,12 @@
-'use client'
-import Header from '@/components/Header'
-import './globals.css'
-import { Inter } from 'next/font/google'
-import SideBar from '@/components/SideBar'
-import { IndexProvider } from './context/selectedIndex'
-import { usePathname } from 'next/navigation'
-import Head from 'next/head'
+"use client";
+import Header from "@/components/Header";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import SideBar from "@/components/SideBar";
+import { IndexProvider } from "./context/selectedIndex";
+import { usePathname } from "next/navigation";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: 'Oğuz Adıgüzel',
@@ -15,27 +14,48 @@ const inter = Inter({ subsets: ['latin'] })
 // }
 
 export default function RootLayout({ children }) {
-  const path = usePathname()
-  console.log('path',path);
-  
+  const path = usePathname();
+  console.log("path", path);
+
   return (
     <IndexProvider>
-    <html lang="en">
-      <body className='bg-black text-white'>
-        <div className='container mx-auto h-screen'>
-          <Header />
-          <div className='w-full flex flex-col lg:flex-row py-5'>
-            <div className='w-full lg:w-1/6 lg:h-screen'>
-              <SideBar menu={false} />
-            </div>
-            <div className='w-full lg:w-5/6'>
-              {children}
+      <html lang="en">
+        <meta
+          name="description"
+          content="Oğuz Adıgüzel, Frontend Developer. Next.js, React, ve JavaScript ile ilgili projeler, blog yazıları ve portföyüm burada."
+        />
+        <meta
+          property="og:title"
+          content="Oğuz Adıgüzel - Frontend Developer"
+        />
+        <meta
+          property="og:description"
+          content="Oğuz Adıgüzel, Frontend Developer. Next.js, React, JavaScript ve daha fazlası hakkında içerikler."
+        />
+        <meta
+          property="og:image"
+          content="https://media.licdn.com/dms/image/v2/D4D03AQEFqwiicLFiPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718319551371?e=2147483647&v=beta&t=52oP3lZQLuSl_ASVQ6XQTwkh4qNS1IARs30zzeBVFF0"
+        />
+        <meta property="og:url" content="https://oguzadiguzel.vercel.app" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://oguzadiguzel.vercel.app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="Frontend Developer, Oğuz Adıgüzel, Next.js, React, JavaScript, Web Development"
+        />
+        <body className="bg-black text-white">
+          <div className="container mx-auto h-screen">
+            <Header />
+            <div className="w-full flex flex-col lg:flex-row py-5">
+              <div className="w-full lg:w-1/6 lg:h-screen">
+                <SideBar menu={false} />
+              </div>
+              <div className="w-full lg:w-5/6">{children}</div>
             </div>
           </div>
-        </div>
-
-      </body>
-    </html>
+        </body>
+      </html>
     </IndexProvider>
-  )
+  );
 }

@@ -25,6 +25,7 @@ export default function Home({ menu }) {
         <motion.div initial={{ opacity: 0, translateY: -200 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1 }} className={menu ? 'w-1/2 pt-3' : "w-full lg:w-1/2 pt-0 lg:pt-24"}>
+          <h1 className={menu ? 'text-4xl font-bold ml-10 px-10 hidden' : "text-6xl font-bold px-5 lg:px-32 tracking-widest hidden"}>Oğuz Adıgüzel</h1>
           <p className={menu ? 'text-4xl font-bold ml-10 px-10' : "text-6xl font-bold px-5 lg:px-32 tracking-widest"}>I'm Frontend Developer</p>
           <a href="/cv/Oğuz-Adıgüzel.pdf" download="OĞUZ_ADIGÜZEL_CV.pdf" className={menu ? 'w-36 h-8 bg-blue-500 hover:w-32 duration-500 ease-in-out ml-20 cursor-pointer flex justify-end items-center mt-4' : "w-36 h-10 bg-blue-500 hover:w-32 duration-500 ease-in-out ml-5 lg:ml-32 flex justify-end items-center cursor-pointer mt-4"}>
             <p className="font-bold mr-1">Download CV</p>
